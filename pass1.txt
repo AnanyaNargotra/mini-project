@@ -77,3 +77,12 @@ while(strcmp(opcode,"END")!=0)
   fclose(prog_pointr);
   fclose(prog_pointr2);
   fclose(prog_pointr3);
+ cout<<"\nSYMBOL TABLE :\n\n";
+  prog_pointr2=fopen("symbol_table.txt","r");
+  ch=fgetc(prog_pointr2);
+  while(ch!=EOF)
+  {
+   cout<<ch;
+   ch=fgetc(prog_pointr2);
+  }
+fclose(prog_pointr2);
